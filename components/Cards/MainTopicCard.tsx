@@ -8,14 +8,12 @@ import {
   SvgIconTypeMap,
   Typography,
 } from "@mui/material";
-import BookRoundedIcon from "@mui/icons-material/BookRounded";
 
 import styles from "../../styles/MainTopicCard.module.css";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
-import Link from "next/link";
 
 interface MainTopicCardProps {
-  Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
+  Icon: OverridableComponent<SvgIconTypeMap<object, "svg">>;
   title: string;
   text: string;
   externalUrl?: string;

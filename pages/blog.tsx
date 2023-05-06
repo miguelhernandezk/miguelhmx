@@ -48,7 +48,7 @@ export default function BlogPostPage() {
           <HeaderPost pageTitle="Blog" />
           {error === true ? errorMessage : null}
           <Grid container spacing={2}>
-            {posts !== undefined
+            {posts !== undefined && partialLoading === false
               ? posts.map((post) => (
                   <Grid key={post.id} item xs={12} md={6} lg={3}>
                     <BlogPostCard

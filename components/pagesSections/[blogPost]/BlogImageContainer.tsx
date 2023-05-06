@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import Image from "next/image";
 import { Parallax } from "react-parallax";
 
 import styles from "../../../styles/pagesSections/[blogPost]/BlogImageContainer.module.css";

@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-import { Box, Container, Divider, Stack, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 import NavBar from "@/components/NavBar";
 import HeaderSection from "@/components/pagesSections/index/HeaderSection";
@@ -8,8 +7,6 @@ import AboutMe from "@/components/pagesSections/index/AboutMe";
 import MainTopics from "@/components/pagesSections/index/MainTopics";
 import BlogAndArticles from "@/components/pagesSections/index/BlogAndArticles";
 import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (

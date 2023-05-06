@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import styles from "../../../styles/pagesSections/[blogPost]/PostBody.module.css";
 import stylesMD from "../../../styles/MDStyles.module.css";
