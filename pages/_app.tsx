@@ -1,4 +1,8 @@
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import {
+  StyledEngineProvider,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material/styles";
 import "@/styles/globals.css";
 import "@fontsource/space-grotesk";
 import "@fontsource/montserrat/300.css";
@@ -42,9 +46,11 @@ const darkTheme = createTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
