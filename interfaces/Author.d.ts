@@ -1,6 +1,6 @@
-import { Asset, Link, RichTextDataTarget } from "contentful";
+import { RichTextDataTarget } from "contentful";
 
-export interface AuthorContenful {
+export interface AuthorContentful {
   name: string;
   nickname: string;
   description: string;

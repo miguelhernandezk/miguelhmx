@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import { Box, Container } from "@mui/material";
 
 import NavBar from "@/components/NavBar";
@@ -14,8 +13,6 @@ import { useEffect, useState } from "react";
 import { BlogPost } from "@/interfaces/BlogPost";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function BlogPostPage() {
   const router = useRouter();
@@ -51,7 +48,7 @@ export default function BlogPostPage() {
           : "not found"
       );
     }
-  }, [router.isReady]);
+  }, [router.isReady, router.query.blogPost]);
 
   return (
     <>
@@ -72,6 +69,7 @@ export default function BlogPostPage() {
             />
           </Box>
         </Container>
+        {error === true ? errorMessage : null}
         {post?.highlightImage !== null &&
         post?.highlightImage !== undefined &&
         post?.highlightImage.file.url !== "" ? (

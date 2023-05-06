@@ -1,4 +1,3 @@
-import SecondaryButton from "@/components/Buttons/SecondaryButton";
 import Counter from "@/components/Counters/Counter";
 import { Box, Stack, Typography } from "@mui/material";
 
@@ -41,8 +40,8 @@ export default function AboutMe() {
           >
             Yeah, yeah. I know. Am I a developer or a sales engineer? Truth
             is... I&apos;m both. I started learning web development in 2021 and
-            I discovered this is one of my biggest passions in life. That's why
-            I'm switching careers.
+            I discovered this is one of my biggest passions in life. That&apos;s
+            why I&apos;m switching careers.
           </Typography>
           {/* <SecondaryButton
             text="More about me"

@@ -8,7 +8,6 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import styles from "../../../styles/pagesSections/index/HeaderSection.module.css";
 import SecondaryButton from "@/components/Buttons/SecondaryButton";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function HeaderSection() {
   return (
@@ -50,13 +49,18 @@ export default function HeaderSection() {
                   About me
                 </Typography>
                 <Typography variant="body1" component="p" color="secondary">
-                  Not only am I a fullstack web developer, but I'm also an
+                  Not only am I a fullstack web developer, but I&apos;m also an
                   expert in industrial automation technology, a technical sales
                   engineer, writer and a self-improvement lover.
                 </Typography>
                 <Box>
                   <Link href="#about-me">
-                    <SecondaryButton text="See more" onClick={() => {}} />
+                    <SecondaryButton
+                      text="See more"
+                      onClick={() => {
+                        return 1;
+                      }}
+                    />
                   </Link>
                 </Box>
               </Stack>
@@ -78,7 +82,12 @@ export default function HeaderSection() {
                 </Typography>
                 <Box>
                   <Link href="#main-topics">
-                    <SecondaryButton text="See more" onClick={() => {}} />
+                    <SecondaryButton
+                      text="See more"
+                      onClick={() => {
+                        return 1;
+                      }}
+                    />
                   </Link>
                 </Box>
               </Stack>

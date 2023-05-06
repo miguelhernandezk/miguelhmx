@@ -1,27 +1,16 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-import { Box, Container, Grid, Input } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 
 import NavBar from "@/components/NavBar";
 import HeaderPost from "@/components/pagesSections/[blogPost]/HeaderPost";
 
-import styles from "../styles/[blogPost].module.css";
-import BlogImageContainer from "@/components/pagesSections/[blogPost]/BlogImageContainer";
-import AuthorDate from "@/components/pagesSections/[blogPost]/AuthorDate";
-import PostBody from "@/components/pagesSections/[blogPost]/PostBody";
 import { getPosts } from "@/services/getPosts";
 import { useEffect, useState } from "react";
-import { BlogPost, BlogPostContentful } from "@/interfaces/BlogPost";
+import { BlogPost } from "@/interfaces/BlogPost";
 import Footer from "@/components/Footer";
-import { useRouter } from "next/router";
 import BlogPostCard from "@/components/Cards/BlogPostCard";
-import { url } from "inspector";
-import { EntryCollection } from "contentful";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function BlogPostPage() {
-  const router = useRouter();
   const [posts, setPosts] = useState<BlogPost[]>();
   const [partialLoading, setPartialLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
@@ -57,10 +46,11 @@ export default function BlogPostPage() {
         <NavBar />
         <Container>
           <HeaderPost pageTitle="Blog" />
+          {error === true ? errorMessage : null}
           <Grid container spacing={2}>
             {posts !== undefined
               ? posts.map((post) => (
-                  <Grid item xs={12} md={6} lg={3}>
+                  <Grid key={post.id} item xs={12} md={6} lg={3}>
                     <BlogPostCard
                       src={
                         post.highlightImage?.file?.url !== null &&
@@ -78,6 +68,7 @@ export default function BlogPostPage() {
                 ))
               : null}
           </Grid>
+          <Footer />
         </Container>
       </Box>
     </>

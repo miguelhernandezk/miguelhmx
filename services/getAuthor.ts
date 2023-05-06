@@ -3,9 +3,7 @@ import { Asset, Entry } from "contentful";
 
 import { ServicesResponse } from "@/interfaces/ServicesResponse";
 import { handleApiErrors } from "./handleApiErrors";
-import { SEOMetadata } from "@/interfaces/SEOMetadata";
-import { Author, AuthorResolved } from "@/interfaces/Author";
-import { ContentfulImage } from "@/interfaces/Media";
+import { Author, AuthorContentful } from "@/interfaces/Author";
 import { getAssetById } from "./getAssets";
 
 const spaceID: string = process.env.NEXT_PUBLIC_SPACE_ID || "";
@@ -14,17 +12,17 @@ const environment: string = process.env.NEXT_PUBLIC_ENVIRONMENT || "";
 
 export const getAuthorById = async (id: string): Promise<ServicesResponse> => {
   try {
-    const API_URL_AUTHOR_BY_ID: string = `https://cdn.contentful.com/spaces/${spaceID}/environments/${environment}/entries/${id}?access_token=${secretKey}&content_type=author&locale=es-MX`;
-    const { data }: { data: Entry<Author> } = await baseAxios.get(
+    const API_URL_AUTHOR_BY_ID = `https://cdn.contentful.com/spaces/${spaceID}/environments/${environment}/entries/${id}?access_token=${secretKey}&content_type=author&locale=es-MX`;
+    const { data }: { data: Entry<AuthorContentful> } = await baseAxios.get(
       API_URL_AUTHOR_BY_ID
     );
-    const author: Author = data.fields;
+    const author: AuthorContentful = data.fields;
 
     const { data: authorImage }: { data: Asset } = await getAssetById(
       author.profilePicture.sys.id
     );
 
-    const authorResponse: AuthorResolved = {
+    const authorResponse: Author = {
       ...author,
       profilePicture: new URL(`https:${authorImage.fields.file.url}`),
     };

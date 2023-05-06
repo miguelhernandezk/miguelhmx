@@ -3,8 +3,6 @@ import {
   Box,
   Divider,
   IconButton,
-  List,
-  ListItem,
   Stack,
   Typography,
 } from "@mui/material";
