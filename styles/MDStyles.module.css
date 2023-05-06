@@ -1,0 +1,23 @@
+.MDStyles {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.MDStyles h2 {
+  font-size: 26px;
+}
+
+.MDStyles p {
+  font-size: 20px;
+}
+
+.MDStyles a {
+  color: white;
+}
+
+.MDStyles blockquote {
+  font-style: italic;
+  padding-left: 20px;
+  border-left: solid 5px white;
+}

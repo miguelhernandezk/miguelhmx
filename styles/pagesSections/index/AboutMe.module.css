@@ -1,0 +1,38 @@
+.heading2::before {
+  font-weight: bold;
+  color: #065fe4;
+  content: "/ ";
+}
+
+.heading2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blogArticlesBT {
+  margin-bottom: 24px;
+}
+
+.aboutMeMainStack {
+  align-items: flex-start;
+}
+
+.developingSitesHeading {
+  font-size: 26px;
+}
+
+@media screen and (min-width: 600px) {
+  .developingSitesHeading {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .developingSitesHeading {
+    font-size: 52px;
+  }
+
+  .aboutMeMainStack {
+    align-items: center;
+  }
+}

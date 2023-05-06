@@ -1,0 +1,20 @@
+.headingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 900px) {
+  .headingContainer {
+    align-items: center;
+    justify-content: center;
+  }
+}

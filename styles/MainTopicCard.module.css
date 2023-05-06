@@ -1,0 +1,61 @@
+.cardContainer {
+  transition: transform 0.5s, background-color 0.5s, color 0.5s;
+  color: #065fe4;
+  transform: scale(1);
+  height: 400px;
+}
+
+.cardActionArea {
+  padding: 64px 32px;
+}
+
+.cardActionArea,
+.cardContent {
+  height: 100%;
+  width: 100%;
+}
+
+.cardContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardContainer:hover {
+  background-color: #065fe4;
+  color: white;
+  transform: scale(1.05);
+}
+
+.iconContainer {
+  transition: background-color 0.5s;
+  background-color: #065fe4;
+  height: 76px;
+  width: 76px;
+}
+
+.cardContainer:hover .iconContainer {
+  background-color: white;
+}
+
+.iconStyle {
+  transition: color 0.5s;
+  font-size: 50px;
+  color: white;
+}
+
+.cardContainer:hover .iconContainer .iconStyle {
+  color: #065fe4;
+}
+
+.cardHeader {
+  padding-left: 0;
+}
+
+.cardHeader div span {
+  font-weight: 700;
+}
+
+.cardText,
+.cardHeader {
+  color: white;
+}

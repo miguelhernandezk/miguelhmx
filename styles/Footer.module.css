@@ -1,0 +1,53 @@
+.footer {
+  margin-bottom: 0;
+}
+
+.avatarNameRoleContainer {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 20px;
+}
+
+.iconList {
+  font-size: 26px;
+}
+
+.bottomFooter {
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .name {
+    font-size: 28px;
+  }
+
+  .role {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .name {
+    font-size: 34px;
+  }
+
+  .role {
+    font-size: 24px;
+  }
+}

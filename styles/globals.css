@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Roboto", "Montserrat", "Space Grotesk";
+  scroll-behavior: smooth !important;
+}
+
+.sectionMargin {
+  margin: 64px 0;
+}
+
+.oddItem {
+  background: #232830;
+}
+
+.no-change-color-links {
+  color: inherit;
+}

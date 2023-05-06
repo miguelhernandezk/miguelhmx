@@ -1,0 +1,34 @@
+.counterContainer {
+  max-width: 232px;
+}
+
+.number,
+.tag {
+  font-weight: bold;
+}
+
+.number {
+  font-size: 40px;
+}
+
+.tag {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 900px) {
+  .number {
+    font-size: 58px;
+  }
+  .tag {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .number {
+    font-size: 76px;
+  }
+  .tag {
+    font-size: 20px;
+  }
+}

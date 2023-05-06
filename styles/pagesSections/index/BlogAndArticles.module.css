@@ -1,0 +1,70 @@
+.mainStackChild {
+  max-width: 100%;
+}
+
+.heading2::before {
+  font-weight: bold;
+  color: #065fe4;
+  content: "/ ";
+}
+
+.heading2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.checkOut {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.dateAndCategory {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.categoryText::before {
+  color: #065fe4;
+  content: " / ";
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.blogPostTitle {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 900px) {
+  .mainStackChild {
+    max-width: 50%;
+  }
+  .checkOut {
+    font-size: 32px;
+  }
+
+  .blogPostTitle {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkOut {
+    font-size: 52px;
+  }
+
+  .blogPostTitle {
+    font-size: 34px;
+  }
+}
