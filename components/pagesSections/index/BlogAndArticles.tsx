@@ -69,7 +69,7 @@ export default function BlogAndArticles({ posts }: { posts: BlogPost[] }) {
                 component="h4"
                 className={styles.blogPostTitle}
               >
-                <Link href={blogPost.slug} className={styles.links}>
+                <Link href={`blog${blogPost.slug}`} className={styles.links}>
                   {blogPost.pageTitle}
                 </Link>
               </Typography>
