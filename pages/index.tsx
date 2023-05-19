@@ -7,8 +7,35 @@ import AboutMe from "@/components/pagesSections/index/AboutMe";
 import MainTopics from "@/components/pagesSections/index/MainTopics";
 import BlogAndArticles from "@/components/pagesSections/index/BlogAndArticles";
 import Footer from "@/components/Footer";
+import { getPosts } from "@/services/getPosts";
+import { BlogPost } from "@/interfaces/BlogPost";
 
-export default function Home() {
+interface Props {
+  posts: BlogPost[];
+}
+
+export async function getStaticProps() {
+  const onSetPosts = async () => {
+    const postsResponse = await getPosts();
+    if (postsResponse.error) {
+      return {
+        props: {
+          posts: undefined,
+        },
+      };
+    } else {
+      const myPosts: BlogPost[] = postsResponse.data;
+      return {
+        props: {
+          posts: myPosts,
+        },
+      };
+    }
+  };
+  return onSetPosts();
+}
+
+export default function Home({ posts }: Props) {
   return (
     <>
       <Head>
@@ -25,7 +52,7 @@ export default function Home() {
             <AboutMe />
           </Box>
           <MainTopics />
-          <BlogAndArticles />
+          <BlogAndArticles posts={posts} />
           <Footer />
         </Container>
       </Box>
