@@ -1,0 +1,53 @@
+.AuthorDateContainer {
+  width: 100%;
+}
+
+.secondaryStack {
+  justify-content: flex-start;
+}
+
+.avatarNameContainer {
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.authorName {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.categoryText {
+  font-size: 16px;
+}
+
+.categoryText::before {
+  color: #065fe4;
+  content: "/ ";
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  .secondaryStack {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .authorName {
+    font-size: 18px;
+  }
+  .categoryText {
+    font-size: 18px;
+  }
+}
