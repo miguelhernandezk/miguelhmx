@@ -99,15 +99,21 @@ export default function HeaderSection() {
               follow me
             </Typography>
             <Stack direction="row">
-              <IconButton>
-                <FacebookRoundedIcon />
-              </IconButton>
-              <IconButton>
-                <TwitterIcon />
-              </IconButton>
-              <IconButton>
-                <InstagramIcon />
-              </IconButton>
+              <Link href="https://www.facebook.com/miguelhmx">
+                <IconButton>
+                  <FacebookRoundedIcon />
+                </IconButton>
+              </Link>
+              <Link href="https://www.twitter.com/miguelhmx">
+                <IconButton>
+                  <TwitterIcon />
+                </IconButton>
+              </Link>
+              <Link href="https://www.instagram.com/miguelhmx">
+                <IconButton>
+                  <InstagramIcon />
+                </IconButton>
+              </Link>
             </Stack>
           </Box>
         </Stack>
