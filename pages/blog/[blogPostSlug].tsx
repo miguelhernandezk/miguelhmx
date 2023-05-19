@@ -64,6 +64,7 @@ export default function BlogPostPage({ post }: Props) {
         <title>{post?.pageTitle} - Miguel Hernández</title>
         <meta name="description" content="Miguel Hernández description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content={post.highlightImage?.file.url} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box component="main">
