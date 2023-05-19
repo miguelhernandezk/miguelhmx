@@ -24,7 +24,7 @@ export default function BlogPostCard({
   const router = useRouter();
   return (
     <Card className={styles.cardStyle}>
-      <CardActionArea onClick={() => router.push(`${slug}`)}>
+      <CardActionArea onClick={() => router.push(`blog/${slug}`)}>
         <CardMedia
           component="img"
           height="140"
